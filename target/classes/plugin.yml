@@ -1,0 +1,27 @@
+name: Pinata
+main: com.example.pinata.PinataPlugin
+version: 1.0.0
+api-version: 1.20
+author: wilsonyt
+
+description: Eğlenceli bir pinata sistemi eklentisi
+
+commands:
+  pinata:
+    description: Pinata kontrol komutu
+    usage: /pinata [spawn|addlocation|listlocations|start|reload|stats|gui]
+    permission: pinata.use
+    permission-message: &cBu komutu kullanma yetkiniz yok!
+
+permissions:
+  pinata.use:
+    description: Temel pinata komutlarını kullanma izni
+    default: true
+  pinata.admin:
+    description: Tüm pinata yönetim komutlarına erişim
+    default: op
+  pinata.admin.stats:
+    description: Diğer oyuncuların istatistiklerini görme
+    default: op
+
+softdepend: [Vault, DecentHolograms]

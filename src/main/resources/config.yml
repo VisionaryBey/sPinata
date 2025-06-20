@@ -1,0 +1,112 @@
+# Pinata Plugin Ayarları
+
+# Otomatik spawn ayarları
+auto-spawn:
+  enabled: true
+  delay: 240  # Saniye cinsinden (86400 = 24 saat)
+
+# Geri sayım ayarları
+countdown:
+  enabled: true
+  time: 15 # Saniye cinsinden
+
+# Pinata türleri
+pinata-types:
+  normal:
+    health: 100
+    name: "&aNormal Pinata &7- &c%health% HP"
+    reward-multiplier: 1.0
+    position-rewards:
+      1:
+        ==: org.bukkit.inventory.ItemStack
+        type: DIAMOND
+        amount: 1
+      2:
+        ==: org.bukkit.inventory.ItemStack
+        type: EMERALD
+        amount: 2
+      3:
+        ==: org.bukkit.inventory.ItemStack
+        type: GOLD_INGOT
+        amount: 3
+    top-reward:
+      ==: org.bukkit.inventory.ItemStack
+      type: NETHER_STAR
+      amount: 1
+    money-reward: 50
+    rewards:
+      - "give %player% diamond 1"
+      - "give %player% emerald 2"
+      - "give %player% gold_ingot 5"
+  
+  elite:
+    health: 250
+    name: "&9Elit Pinata &7- &c%health% HP"
+    reward-multiplier: 1.5
+    position-rewards:
+      1:
+        ==: org.bukkit.inventory.ItemStack
+        type: DIAMOND
+        amount: 3
+      2:
+        ==: org.bukkit.inventory.ItemStack
+        type: EMERALD
+        amount: 5
+      3:
+        ==: org.bukkit.inventory.ItemStack
+        type: GOLD_INGOT
+        amount: 8
+    top-reward:
+      ==: org.bukkit.inventory.ItemStack
+      type: NETHER_STAR
+      amount: 1
+    money-reward: 150
+    rewards:
+      - "give %player% diamond 3"
+      - "give %player% emerald 5"
+      - "give %player% gold_ingot 8"
+  
+  legendary:
+    health: 500
+    name: "&6Efsanevi Pinata &7- &c%health% HP"
+    reward-multiplier: 2.5
+    position-rewards:
+      1:
+        ==: org.bukkit.inventory.ItemStack
+        type: DIAMOND_BLOCK
+        amount: 1
+      2:
+        ==: org.bukkit.inventory.ItemStack
+        type: EMERALD_BLOCK
+        amount: 1
+      3:
+        ==: org.bukkit.inventory.ItemStack
+        type: GOLD_BLOCK
+        amount: 1
+    top-reward:
+      ==: org.bukkit.inventory.ItemStack
+      type: DRAGON_EGG
+      amount: 1
+    money-reward: 500
+    rewards:
+      - "give %player% diamond_block 1"
+      - "give %player% emerald_block 1"
+      - "give %player% gold_block 1"
+
+# BossBar ayarları
+bossbar:
+  title: "&dPinata &7- &a%health%/%max% HP"
+  color: PINK
+  style: SOLID
+
+# Mesajlar
+messages:
+  damage: "&ePinataya &a%damage% &ehasar verdin! Toplam: &a%total%"
+  top-announcement: "&6Pinata Top Hasar:"
+  top-format: "&e#%position% &a%player% &7- &e%damage%"
+  position-reward: "&a#%position%. sırada olduğun için ödül kazandın!"
+  top-reward: "&aBirinci olduğun için süper ödül kazandın!"
+  reward: "&aPinatadan ödül kazandın!"
+
+# Diğer ayarlar
+announce-top-players: true
